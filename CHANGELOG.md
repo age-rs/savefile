@@ -3,6 +3,16 @@
 
 This file contains information about changes in each version of savefile.
 
+## 0.20.4
+
+Get rid of the proc-macro-error2 dependency, since is is unmaintained.
+
+
+## 0.20.3
+
+The convenience functions `save_file`, `save_file_compressed` and `save_file_noschema`
+did not correctly flush their BufWriter. This meant that write errors could go unreported.
+
 ## 0.20.2
 
 Fix bug where `#[savefile_ignore]` didn't work if the ignored field was first or last,

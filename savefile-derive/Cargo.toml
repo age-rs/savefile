@@ -3,7 +3,7 @@ name = "savefile-derive"
 version.workspace = true
 authors = ["Anders Musikka <anders@andersmusikka.se>"]
 repository = "https://github.com/avl/savefile"
-rust-version = "1.74"
+rust-version = "1.82"
 description = "Custom derive macros for savefile crate - simple, convenient, fast, versioned, binary serialization/deserialization library."
 
 readme = "../README.md"
@@ -24,8 +24,7 @@ nightly = []
 proc-macro = true
 
 [dependencies]
-quote = "1.0"
-syn = { version = "2.0.106" , features = ["full","extra-traits"]}
-proc-macro2 = { version = "1.0", features = ["nightly"] }
-proc-macro-error2 = "2.0.1"
+quote.workspace = true
+syn.workspace = true
+proc-macro2 = { workspace = true, features = ["nightly", "span-locations"] }
 
